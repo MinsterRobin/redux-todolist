@@ -33,19 +33,21 @@ const ItemText = styled(H2)`
     scrollbar-width: none;  /* Firefox */
 `;
 
-const Item = (props) => {
+const Item = ({text, onDoneButtonClick, onTrashButtonClick}) => {
     return(
         <Layout>
-            <ItemText>{props.text}</ItemText>
+            <ItemText>{text}</ItemText>
             <Separator vertical height={"10px"}/>
-            <Button icon={check_icon} color={COLORS.secondary}/>
-            <Button icon={trash_icon} color={COLORS.primary}/>
+            <Button secondary icon={check_icon} color={COLORS.secondary} onClick={onDoneButtonClick}/>
+            <Button primary icon={trash_icon} color={COLORS.primary} onClick={onTrashButtonClick}/>
         </Layout>
     );
 };
 
 Item.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    onDoneButtonClick: PropTypes.func.isRequired,
+    onTrashButtonClick: PropTypes.func.isRequired
 };
 
 export default Item;

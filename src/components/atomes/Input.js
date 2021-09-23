@@ -18,10 +18,6 @@ const Input = styled.input`
     &::placeholder {
         color: #FDFDFD;
     }
-    
-    &:read-only {
-        
-    }
 `;
 
 Input.propTypes = {

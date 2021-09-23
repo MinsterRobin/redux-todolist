@@ -1,27 +1,21 @@
-import React from "react";
-import styled from "styled-components";
+import React, {useState} from "react";
 import Separator from "../layouts/Separator";
 import {H1} from "../atomes/Typography";
 import ToDoList from "../organisms/ToDoList";
-
-const Layout = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    max-width: 1280px;
-    min-height: 100vh;
-    background-color: var(--color-primary);
-    padding: var(--padding-size);
-`;
+import TemplateTodoList from "../templates/TemplateTodoList";
+import Container from "../atomes/Container";
 
 function App() {
+    const [items, setItems] = useState(["Ma première tâche"]);
+
     return (
-        <Layout>
-            <H1>Redux ToDoList</H1>
-            <Separator/>
-            <ToDoList/>
-        </Layout>
+        <TemplateTodoList>
+            <Container flex vertical align={"center"} primary padding={"var(--padding-size)"}>
+                <H1>Redux ToDoList</H1>
+                <Separator/>
+                <ToDoList items={items} setItems={setItems}/>
+            </Container>
+        </TemplateTodoList>
   );
 }
 
