@@ -4,6 +4,7 @@ import Separator from "../layouts/Separator";
 import Item from "../molecules/Item";
 import React, {useState} from "react";
 import PropTypes from 'prop-types';
+import Transition from "../atomes/transition";
 
 const Layout = styled.div`
     display: flex;
@@ -45,15 +46,19 @@ const ToDoList = ({items, setItems}) => {
                 onChange={itemCreatorChange}
                 onSubmitClick={() => {updateItems("ADD", newItem)}}
             />
+
             <Separator height={"50px"}/>
+
             {items.map((item, key) =>
                 <React.Fragment key={key}>
-                    <Item
-                        text={item}
-                        onDoneButtonClick={() => {updateItems("DONE", key)}}
-                        onTrashButtonClick={() => {updateItems("TRASH", key)}}
-                    />
-                    <Separator height={"20px"}/>
+                    <Transition>
+                        <Item
+                            text={item}
+                            onDoneButtonClick={() => {updateItems("DONE", key)}}
+                            onTrashButtonClick={() => {updateItems("TRASH", key)}}
+                        />
+                        <Separator height={"20px"}/>
+                    </Transition>
                 </React.Fragment>
             )}
         </Layout>
