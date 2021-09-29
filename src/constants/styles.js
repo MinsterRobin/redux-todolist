@@ -3,7 +3,8 @@ const COLORS = {
     background: '#252525',
     primary: '#6930C3',
     secondary: '#64DFDF',
-    tertiary: '#80FFDB'
+    tertiary: '#80FFDB',
+    warning: '#DF6464'
 };
 const FONTS = {
     family: 'Montserrat',

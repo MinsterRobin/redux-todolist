@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
         --color-primary: ${COLORS.primary};
         --color-secondary: ${COLORS.secondary};
         --color-tertiary: ${COLORS.tertiary};
+        --color-warning: ${COLORS.warning};
         
         font-size: 62.5%;
         --font-size-very-small: ${FONTS.very_small};

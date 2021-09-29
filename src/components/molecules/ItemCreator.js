@@ -6,7 +6,7 @@ import Button from "../atomes/Button";
 import {COLORS} from "../../constants/styles";
 import PropTypes from 'prop-types';
 
-const Layout = styled.div`
+const Layout = styled.form`
     display: flex;
     width: 100%;
     height: 80px;
@@ -16,18 +16,24 @@ const Layout = styled.div`
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
 `;
 
-const ItemCreator = ({onSubmitClick, onChange}) => {
+const ItemCreator = ({onSubmitClick, onChange, error}) => {
     return(
-        <Layout>
-            <Input onChange={onChange} color={COLORS.secondary} type={"text"} placeholder="New task ..."/>
-            <Button secondary icon={add_button_svg} color={COLORS.secondary} onClick={onSubmitClick}/>
+        <Layout onSubmit={(e) => {e.preventDefault(); onSubmitClick(e)}}>
+            <Input
+                onChange={onChange}
+                color={error ? COLORS.warning : COLORS.secondary}
+                type={"text"}
+                placeholder="New task ..."
+            />
+            <Button secondary icon={add_button_svg} type="submit"/>
         </Layout>
     );
 };
 
 ItemCreator.propTypes = {
     onSubmitClick: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    error: PropTypes.bool
 };
 
 export default ItemCreator;

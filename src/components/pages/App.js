@@ -6,7 +6,7 @@ import TemplateTodoList from "../templates/TemplateTodoList";
 import Container from "../atomes/Container";
 
 function App() {
-    const [items, setItems] = useState(["Ma première tâche"]);
+    const [items, setItems] = useState(["Ma première tâche", "1", "2", "3", "4"]);
 
     return (
         <TemplateTodoList>

@@ -32,14 +32,13 @@ const Button = (props) => {
     }, [buttonRef]);
 
     return(
-        <ButtonSC {...props} height={height} color={props.color} ref={buttonRef}>
+        <ButtonSC {...props} height={height} ref={buttonRef}>
             <img src={props.icon} alt="Button Icon"/>
         </ButtonSC>
     );
 };
 
 Button.propTypes = {
-    color: PropTypes.string,
     icon: PropTypes.string,
     primary: PropTypes.bool,
     secondary: PropTypes.bool,

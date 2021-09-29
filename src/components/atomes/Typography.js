@@ -12,4 +12,10 @@ const H2 = styled.p`
     color: var(--color-text);    
 `;
 
-export {H1, H2};
+const H4 = styled.p`
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-regular);
+    color: var(--color-text);    
+`;
+
+export {H1, H2, H4};
