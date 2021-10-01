@@ -14,11 +14,6 @@ const Layout = styled.div`
     width: 100%;
     max-width: 600px;
 `;
-
-const TransitionContainerSC = styled(animated.div)`
-    width: 100%;
-`;
-
 const ToDoList = () => {
     const [newItem, setNewItem] = useState("");
     const items = useSelector(selectTodoList);
@@ -48,14 +43,14 @@ const ToDoList = () => {
             <Separator height={"50px"}/>
 
             {transitions((styles, item, t) =>
-                <TransitionContainerSC style={styles} key={t.key}>
+                <animated.div style={{styles, width: "100%"}} key={t.key}>
                     <Item
                         text={item}
                         onDoneButtonClick={() => dispatch(deleteItem(t.key))}
                         onTrashButtonClick={() => console.log(t.key)}
                     />
                     <Separator height={"20px"}/>
-                </TransitionContainerSC>
+                </animated.div>
             )}
 
         </Layout>
