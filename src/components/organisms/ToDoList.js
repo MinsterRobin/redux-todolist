@@ -14,6 +14,7 @@ const Layout = styled.div`
     width: 100%;
     max-width: 600px;
 `;
+
 const ToDoList = () => {
     const [newItem, setNewItem] = useState("");
     const items = useSelector(selectTodoList);

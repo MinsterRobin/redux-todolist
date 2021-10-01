@@ -1,19 +1,19 @@
 import styled from "styled-components";
 import {useEffect, useState, useRef} from "react";
 import PropTypes from 'prop-types';
-import Primary from "../ions/Primary";
-import Secondary from "../ions/Secondary";
-import Tertiary from "../ions/Tertiary";
+import {Primary, Secondary, Tertiary, Warning} from '../ions/Styles';
 
 const ButtonSC = styled.button`
     height: 100%;
     width: ${props => props.height + "px"};
-    ${props => (props.primary && Primary) || (props.secondary && Secondary) || (props.tertiary && Tertiary)};
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border: none;
+    
+    // Background-Color
+     ${props => (props.warning && Warning) || (props.primary && Primary) || (props.secondary && Secondary) || (props.tertiary && Tertiary)};
     
     &:hover {
         opacity: 0.8;
@@ -43,6 +43,7 @@ Button.propTypes = {
     primary: PropTypes.bool,
     secondary: PropTypes.bool,
     tertiary: PropTypes.bool,
+    warning: PropTypes.bool
 };
 
 export default Button;

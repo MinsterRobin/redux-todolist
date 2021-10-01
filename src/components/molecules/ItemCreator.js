@@ -3,7 +3,6 @@ import styled from "styled-components";
 import add_button_svg from "../../assets/Add.svg";
 import Input from "../atomes/Input";
 import Button from "../atomes/Button";
-import {COLORS} from "../../constants/styles";
 import PropTypes from 'prop-types';
 
 const Layout = styled.form`
@@ -20,8 +19,9 @@ const ItemCreator = ({onSubmitClick, onChange, error}) => {
     return(
         <Layout onSubmit={(e) => {e.preventDefault(); onSubmitClick(e)}}>
             <Input
+                warning={error}
+                secondary
                 onChange={onChange}
-                color={error ? COLORS.warning : COLORS.secondary}
                 type={"text"}
                 placeholder="New task ..."
             />

@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3d05cc-e8df-4e06-8eab-a0381c288b70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ions/Styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atomes/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atomes/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atomes/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atomes/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atomes/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atomes/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ions/Primary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ions/Secondary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ions/Tertiary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/molecules/ItemCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/ItemCreator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/organisms/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/ToDoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,7 @@
       <workItem from="1632146370140" duration="15527000" />
       <workItem from="1632222166122" duration="34678000" />
       <workItem from="1632415028994" duration="5077000" />
-      <workItem from="1632824963101" duration="49349000" />
+      <workItem from="1632824963101" duration="51300000" />
     </task>
     <task id="LOCAL-00001" summary="State functionnal without Redux">
       <created>1632413619871</created>
@@ -137,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633110779828</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor some stuff">
+      <created>1633111350244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633111350244</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +162,8 @@
     <MESSAGE value="Temp Commit" />
     <MESSAGE value="Animation Transition" />
     <MESSAGE value="Added Redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Redux" />
+    <MESSAGE value="Refactor some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor some stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632830829033">
@@ -161,15 +174,15 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="783" y="380" key="#com.intellij.fileTypes.FileTypeChooser/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1633013330756" />
-    <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1632918842841">
+    <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633112286447">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1632918842841" />
+    <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633112286447" />
     <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1631712315813" />
-    <state x="637" y="171" key="CommitChangelistDialog2" timestamp="1633110778707">
+    <state x="637" y="171" key="CommitChangelistDialog2" timestamp="1633111349724">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="637" y="171" key="CommitChangelistDialog2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633110778707" />
+    <state x="637" y="171" key="CommitChangelistDialog2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633111349724" />
     <state x="637" y="171" key="CommitChangelistDialog2/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1632941521455" />
     <state x="805" y="332" key="FileChooserDialogImpl" timestamp="1633013249373">
       <screen x="0" y="0" width="2048" height="1152" />
@@ -302,10 +315,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="586" y="313" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1632830445895" />
-    <state x="666" y="302" width="700" height="530" key="recent.locations.popup" timestamp="1632405894947">
+    <state x="666" y="302" width="700" height="530" key="recent.locations.popup" timestamp="1633112530617">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="666" y="302" width="700" height="530" key="recent.locations.popup/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1632405894947" />
+    <state x="666" y="302" width="700" height="530" key="recent.locations.popup/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633112530617" />
     <state x="666" y="302" width="700" height="530" key="recent.locations.popup/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1631792521161" />
   </component>
 </project>

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types';
-import Primary from "../ions/Primary";
-import Secondary from "../ions/Secondary";
-import Tertiary from "../ions/Tertiary";
+import {Primary, Secondary, Tertiary, Warning} from '../ions/Styles';
 
 const Container = styled.div`
     display: ${props => props.flex && "flex"};
@@ -14,7 +12,7 @@ const Container = styled.div`
     height: 100%;
     flex: 1;
     
-    ${props => (props.primary && Primary) || (props.secondary && Secondary) || (props.tertiary && Tertiary)};
+    ${props => (props.warning && Warning) || (props.primary && Primary) || (props.secondary && Secondary) || (props.tertiary && Tertiary)};
 `;
 
 Container.propTypes = {
@@ -22,8 +20,12 @@ Container.propTypes = {
     vertical: PropTypes.bool,
     align: PropTypes.string,
     justify: PropTypes.string,
+    padding: PropTypes.string,
+
     primary: PropTypes.bool,
-    padding: PropTypes.string
+    secondary: PropTypes.bool,
+    tertiary: PropTypes.bool,
+    warning: PropTypes.bool
 };
 
 export default Container;
