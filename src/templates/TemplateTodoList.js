@@ -5,6 +5,7 @@ const TemplateTodoList = styled.div`
     flex-direction: column;
     align-items: center;
     margin: auto;
+    min-width: 320px;
     max-width: 1280px;
     min-height: 100vh;
 `;

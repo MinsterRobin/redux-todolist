@@ -5,7 +5,7 @@ import Button from "../atomes/Button";
 import PropTypes from 'prop-types';
 import trash_icon from "../../assets/Trash.svg";
 import check_icon from "../../assets/Check.svg";
-import Separator from "../layouts/Separator";
+import Separator from "../atomes/Separator";
 import {H2} from "../atomes/Typography";
 
 const Layout = styled.div`
@@ -50,4 +50,4 @@ Item.propTypes = {
     onTrashButtonClick: PropTypes.func.isRequired
 };
 
-export default Item;
+export default React.memo(Item);

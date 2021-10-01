@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import ItemCreator from "../molecules/ItemCreator";
-import Separator from "../layouts/Separator";
+import Separator from "../atomes/Separator";
 import Item from "../molecules/Item";
 import React, {useState} from "react";
-import PropTypes from 'prop-types';
 import {useTransition, animated} from "react-spring";
+import {useDispatch, useSelector} from "react-redux";
+import {addItem, deleteItem, setError, selectTodoList, selectError} from "../../slices/sliceTodoList";
 
 const Layout = styled.div`
     display: flex;
@@ -18,33 +19,15 @@ const TransitionContainerSC = styled(animated.div)`
     width: 100%;
 `;
 
-const ToDoList = ({items, setItems}) => {
+const ToDoList = () => {
     const [newItem, setNewItem] = useState("");
-    const [error, setError] = useState(false);
+    const items = useSelector(selectTodoList);
+    const error = useSelector(selectError);
+    const dispatch = useDispatch();
 
     const handleItemCreatorChange = (e) => {
-        error && setError(false);
         setNewItem(e.target.value);
-    };
-
-    const updateItems = (action, payload) => {
-        let tempArray = items;
-        switch (action) {
-            case "ADD":
-                items.indexOf(newItem) === -1 ? setItems([...items, payload]) : setError(true);
-
-                break;
-            case "DONE":
-                tempArray.splice(payload,1);
-                setItems([...tempArray]);
-                break;
-            case "TRASH":
-                tempArray.splice(payload,1);
-                setItems([...tempArray]);
-                break;
-            default:
-                return items;
-        }
+        items.indexOf(e.target.value) !== -1 ? dispatch(setError(true)) : dispatch(setError(false));
     };
 
     const transitions = useTransition(items , {
@@ -58,7 +41,7 @@ const ToDoList = ({items, setItems}) => {
         <Layout>
             <ItemCreator
                 onChange={handleItemCreatorChange}
-                onSubmitClick={() => updateItems("ADD", newItem)}
+                onSubmitClick={() => dispatch(addItem(newItem))}
                 error={error}
             />
 
@@ -68,7 +51,7 @@ const ToDoList = ({items, setItems}) => {
                 <TransitionContainerSC style={styles} key={t.key}>
                     <Item
                         text={item}
-                        onDoneButtonClick={() => updateItems("DONE", t.key)}
+                        onDoneButtonClick={() => dispatch(deleteItem(t.key))}
                         onTrashButtonClick={() => console.log(t.key)}
                     />
                     <Separator height={"20px"}/>
@@ -77,11 +60,6 @@ const ToDoList = ({items, setItems}) => {
 
         </Layout>
     );
-};
-
-ToDoList.propTypes = {
-    items: PropTypes.array.isRequired,
-    setItems: PropTypes.func.isRequired,
 };
 
 export default ToDoList;
