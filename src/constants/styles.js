@@ -46,6 +46,14 @@ const THEMES = [
         secondary: '#D89216',
         tertiary: '#E1D89F',
         warning: '#DF6464'
+    },
+    {
+        text: 'white',
+        background: '#2C394B',
+        primary: '#082032',
+        secondary: '#334756',
+        tertiary: '#FF4C29',
+        warning: '#DF6464'
     }
 ];
 

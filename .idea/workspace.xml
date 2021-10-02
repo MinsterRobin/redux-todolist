@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d3d05cc-e8df-4e06-8eab-a0381c288b70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atomes/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atomes/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organisms/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/ToDoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1632222166122" duration="34678000" />
       <workItem from="1632415028994" duration="5077000" />
       <workItem from="1632824963101" duration="51828000" />
-      <workItem from="1633175514045" duration="4823000" />
+      <workItem from="1633175514045" duration="5260000" />
     </task>
     <task id="LOCAL-00001" summary="State functionnal without Redux">
       <created>1632413619871</created>
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633179536389</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix some bugs">
+      <created>1633180539580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1633180539580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +179,8 @@
     <MESSAGE value="Refactor some stuff" />
     <MESSAGE value="Refactor Styles Ions into one file" />
     <MESSAGE value="V1 theming" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1 theming" />
+    <MESSAGE value="Fix some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632830829033">
@@ -189,10 +196,10 @@
     </state>
     <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633112286447" />
     <state x="755" y="324" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1631712315813" />
-    <state x="637" y="171" key="CommitChangelistDialog2" timestamp="1633179535337">
+    <state x="637" y="171" key="CommitChangelistDialog2" timestamp="1633180539101">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="637" y="171" key="CommitChangelistDialog2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633179535337" />
+    <state x="637" y="171" key="CommitChangelistDialog2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633180539101" />
     <state x="637" y="171" key="CommitChangelistDialog2/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1632941521455" />
     <state x="805" y="332" key="FileChooserDialogImpl" timestamp="1633013249373">
       <screen x="0" y="0" width="2048" height="1152" />
@@ -316,10 +323,10 @@
     </state>
     <state x="533" y="219" key="SettingsEditor/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1632415079287" />
     <state x="533" y="219" key="SettingsEditor/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1631815155237" />
-    <state x="617" y="310" key="Vcs.Push.Dialog.v2" timestamp="1633113183534">
+    <state x="617" y="310" key="Vcs.Push.Dialog.v2" timestamp="1633180542893">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="617" y="310" key="Vcs.Push.Dialog.v2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633113183534" />
+    <state x="617" y="310" key="Vcs.Push.Dialog.v2/0.0.2048.1152/-1920.243.1920.1080/2560.243.1920.1080@0.0.2048.1152" timestamp="1633180542893" />
     <state x="617" y="310" key="Vcs.Push.Dialog.v2/2560.243.1920.1080/-1920.243.1920.1080/0.0.2048.1152@0.0.2048.1152" timestamp="1632941524173" />
     <state x="586" y="313" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1632830445895">
       <screen x="0" y="0" width="2048" height="1152" />
