@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {COLORS, FONTS} from "../../constants/styles";
+import {FONTS} from "../../constants/styles";
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -7,14 +7,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     
-    html {
-        --color-text: ${COLORS.text};
-        --color-background: ${COLORS.background};
-        --color-primary: ${COLORS.primary};
-        --color-secondary: ${COLORS.secondary};
-        --color-tertiary: ${COLORS.tertiary};
-        --color-warning: ${COLORS.warning};
-        
+    html {        
         font-size: 62.5%;
         --font-size-very-small: ${FONTS.very_small};
         --font-size-small: ${FONTS.small};
@@ -28,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
         
         --padding-size: 40px;
         
-        background-color: var(--color-background);
+        background-color: ${props => props.theme.background};
         
         @media (max-width: 768px) {
             --padding-size: 20px;

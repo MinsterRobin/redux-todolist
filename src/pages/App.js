@@ -1,19 +1,19 @@
 import React from "react";
-import Separator from "../components/atomes/Separator";
-import {H1} from "../components/atomes/Typography";
-import ToDoList from "../components/organisms/ToDoList";
-import TemplateTodoList from "../templates/TemplateTodoList";
-import Container from "../components/atomes/Container";
+import {useSelector} from "react-redux";
+import {ThemeProvider} from "styled-components";
+import {THEMES} from "../constants/styles";
+import GlobalStyles from "../components/atomes/GlobalStyles";
+import PageTodoList from "./PageTodoList";
+import {selectTheme} from "../slices/sliceTheme";
 
 function App() {
+    const themeNumber = useSelector(selectTheme);
+
     return (
-        <TemplateTodoList>
-            <Container flex vertical align={"center"} primary padding={"var(--padding-size)"}>
-                <H1>Redux ToDoList</H1>
-                <Separator/>
-                <ToDoList/>
-            </Container>
-        </TemplateTodoList>
+        <ThemeProvider theme={THEMES[themeNumber]}>
+            <GlobalStyles/>
+            <PageTodoList />
+        </ThemeProvider>
   );
 }
 

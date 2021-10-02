@@ -1,17 +1,17 @@
 import {css} from "styled-components";
 
 export const Primary = () => css`
-    background-color: var(--color-primary);
+    background-color: ${props => props.theme.primary};
 `;
 
 export const Secondary = () => css`
-    background-color: var(--color-secondary);
+    background-color: ${props => props.theme.secondary};
 `;
 
 export const Tertiary = () => css`
-    background-color: var(--color-tertiary);
+    background-color: ${props => props.theme.tertiary};
 `;
 
 export const Warning = () => css`
-    background-color: var(--color-warning);
+    background-color: ${props => props.theme.warning};
 `;

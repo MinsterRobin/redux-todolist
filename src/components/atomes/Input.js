@@ -5,8 +5,8 @@ import {Primary, Secondary, Tertiary, Warning} from '../ions/Styles';
 const Input = styled.input`
     width: 100%;
     flex: 1;
-    color: var(--color-text);
-    font-family: var(--font-family-primary);
+    color: ${props => props.theme.text};
+    font-family: ${props => props.theme.primary};
     font-size: var(--font-size-large);    
     padding-left: 10px;
     border: none;
@@ -18,7 +18,7 @@ const Input = styled.input`
     }
     
     &::placeholder {
-        color: #FDFDFD;
+        color: ${props => props.theme.text};
     }
 `;
 

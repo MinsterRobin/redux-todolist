@@ -9,8 +9,8 @@ const Layout = styled.form`
     display: flex;
     width: 100%;
     height: 80px;
-    border: 10px var(--color-text) solid;
-    background-color: var(--color-text);
+    border: 10px ${props => props.theme.text} solid;
+    background-color: ${props => props.theme.text};
     border-radius: 7px;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
 `;

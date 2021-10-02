@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {COLORS} from "../../constants/styles";
 import Button from "../atomes/Button";
 import PropTypes from 'prop-types';
 import trash_icon from "../../assets/Trash.svg";
@@ -12,8 +11,8 @@ const Layout = styled.div`
     display: flex;
     width: 100%;
     height: 80px;
-    border: 10px var(--color-text) solid;
-    background-color: var(--color-tertiary);
+    border: 10px ${props => props.theme.text} solid;
+    background-color: ${props => props.theme.tertiary};
     border-radius: 7px;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
     align-items: center;
@@ -38,8 +37,8 @@ const Item = ({text, onDoneButtonClick, onTrashButtonClick}) => {
         <Layout>
             <ItemText>{text}</ItemText>
             <Separator vertical height={"10px"}/>
-            <Button secondary icon={check_icon} color={COLORS.secondary} onClick={onDoneButtonClick}/>
-            <Button primary icon={trash_icon} color={COLORS.primary} onClick={onTrashButtonClick}/>
+            <Button secondary icon={check_icon} onClick={onDoneButtonClick}/>
+            <Button primary icon={trash_icon} onClick={onTrashButtonClick}/>
         </Layout>
     );
 };
