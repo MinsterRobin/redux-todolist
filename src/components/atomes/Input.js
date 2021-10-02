@@ -6,7 +6,7 @@ const Input = styled.input`
     width: 100%;
     flex: 1;
     color: ${props => props.theme.text};
-    font-family: ${props => props.theme.primary};
+    font-family: var(--font-family-primary);
     font-size: var(--font-size-large);    
     padding-left: 10px;
     border: none;
